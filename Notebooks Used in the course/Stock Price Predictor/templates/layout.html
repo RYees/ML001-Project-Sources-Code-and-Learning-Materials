@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">My App</a>
+        </nav>
+        {% block content %}{% endblock %}
+        {% block form %}{% endblock %}
+        <!-- Form -->
+        <div class="row justify-content-md-center mt-4">
+            <form method="POST" action="/predict/">
+                <div class="form-group">
+                    <label for="Open">Open</label>
+                    <input type="text" class="form-control" id="Open" name="Open" placeholder="Enter Open value">
+                </div>
+                <div class="form-group">
+                    <label for="High">High</label>
+                    <input type="text" class="form-control" id="High" name="High" placeholder="Enter High value">
+                </div>
+                <div class="form-group">
+                    <label for="Low">Low</label>
+                    <input type="text" class="form-control" id="Low" name="Low" placeholder="Enter Low value">
+                </div>
+                <div class="form-group">
+                    <label for="Volume">Volume</label>
+                    <input type="text" class="form-control" id="Volume" name="Volume" placeholder="Enter Volume value">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
